@@ -19,8 +19,8 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     https: {
-      key: readFileSync('../server/server.key', 'utf8'),
-      cert: readFileSync('../server/server.cert', 'utf8'),
+      key: readFileSync('./localhost-key.pem', 'utf8'),
+      cert: readFileSync('./localhost.pem', 'utf8'),
     },
     proxy: {
       '/api': {
