@@ -5,9 +5,10 @@ import appRouter from './app/app.router.js';
 import apiResponse from './middleware/apiResponse.js';
 import cors from '@koa/cors';
 import staticServer from 'koa-static';
-import https from 'https';
-import http from 'http';
-import { readFileSync } from 'fs';
+
+// import https from 'https';
+// import http from 'http';
+// import { readFileSync } from 'fs'
 import enforceHttps from 'koa-sslify';
 const app = new Koa();
 
@@ -34,15 +35,15 @@ app.use(
 app.use(apiResponse);
 app.use(appRouter.routes());
 
-// app.listen(6030);
+// // app.listen(6030);
 
-const options = {
-  key: readFileSync('./localhost-key.pem', 'utf8'),
-  cert: readFileSync('./localhost.pem', 'utf8'),
-};
+// const options = {
+//   key: readFileSync("./localhost-key.pem", "utf8"),
+//   cert: readFileSync("./localhost.pem", "utf8")
+// };
 
-// start the server
-http.createServer(app.callback()).listen(6031);
-https.createServer(options, app.callback()).listen(6030, () => {
-  console.log(`➜  Network: https://localhost:6030/`);
-});
+// // start the server
+// http.createServer(app.callback()).listen(6031);
+// https.createServer(options, app.callback()).listen(6030, () => {
+//   console.log(`➜  Network: https://localhost:6030/`);
+// });
