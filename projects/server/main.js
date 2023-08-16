@@ -9,7 +9,7 @@ import staticServer from 'koa-static';
 // import https from 'https';
 // import http from 'http';
 // import { readFileSync } from 'fs'
-import enforceHttps from 'koa-sslify';
+// import enforceHttps from 'koa-sslify';
 const app = new Koa();
 
 // 设置静态文件中间件
@@ -17,11 +17,11 @@ app.use(staticServer('./static'));
 
 app.use(cors()); // 添加跨域处理中间件
 
-app.use(
-  enforceHttps.default({
-    port: 6030,
-  }),
-);
+// app.use(
+//   enforceHttps.default({
+//     port: 6030,
+//   }),
+// );
 
 app.use(
   bodyParser({
