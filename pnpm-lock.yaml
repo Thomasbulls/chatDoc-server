@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -23,8 +27,8 @@ importers:
   projects/client:
     dependencies:
       '@chatdocai/chatdoc-sdk':
-        specifier: 0.0.11
-        version: 0.0.11
+        specifier: 0.0.9
+        version: 0.0.9
       '@element-plus/icons-vue':
         specifier: ^2.1.0
         version: 2.1.0(vue@3.2.47)
@@ -59,7 +63,7 @@ importers:
         specifier: ^1.63.6
         version: 1.63.6
       stylelint:
-        specifier: ^15.7.0
+        specifier: ^15.6.1
         version: 15.7.0
       stylelint-config-prettier:
         specifier: ^9.0.5
@@ -404,8 +408,8 @@ packages:
       '@babel/helper-validator-identifier': 7.22.5
       to-fast-properties: 2.0.0
 
-  /@chatdocai/chatdoc-sdk@0.0.11:
-    resolution: {integrity: sha512-FFCFV0ncocgJTSZsZxXUTPRjPuZB2S3zILl2BE6kDDC7pg1tLhkQGkWB8NpLbdYRNRa6KiDP3Zf1eLUURqvl2g==}
+  /@chatdocai/chatdoc-sdk@0.0.9:
+    resolution: {integrity: sha512-UquVGYVZ+GrDmOlqcHmlc95ksOl3d/ZGdHzsyJT0bn3A3ciRPgpYfG8QFnE3EtyKXC9wLmyGOofOg5jwglNM/A==}
     dependencies:
       emittery: 1.0.1
       lodash-es: 4.17.21
@@ -4531,7 +4535,7 @@ packages:
     dev: false
 
   /picocolors@1.0.0:
-    resolution: {integrity: sha1-y1vcdP8/UYkiNur3nWi8RFZKuBw=}
+    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
@@ -4571,7 +4575,7 @@ packages:
     dependencies:
       htmlparser2: 3.10.1
       postcss: 7.0.39
-      postcss-syntax: 0.36.2(postcss-html@0.36.0)(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@1.5.0)(postcss@8.4.24)
     dev: false
 
   /postcss-html@1.5.0:
@@ -4592,7 +4596,7 @@ packages:
     dependencies:
       '@babel/core': 7.22.5
       postcss: 7.0.39
-      postcss-syntax: 0.36.2(postcss-html@0.36.0)(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@1.5.0)(postcss@8.4.24)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4611,7 +4615,7 @@ packages:
       postcss-syntax: '>=0.36.0'
     dependencies:
       postcss: 7.0.39
-      postcss-syntax: 0.36.2(postcss-html@0.36.0)(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@1.5.0)(postcss@8.4.24)
       remark: 10.0.1
       unist-util-find-all-after: 1.0.5
     dev: false
@@ -4714,7 +4718,7 @@ packages:
       postcss: 8.4.24
     dev: false
 
-  /postcss-syntax@0.36.2(postcss-html@0.36.0)(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39):
+  /postcss-syntax@0.36.2(postcss-html@1.5.0)(postcss@8.4.24):
     resolution: {integrity: sha512-nBRg/i7E3SOHWxF3PpF5WnJM/jQ1YpY9000OaVXlAQj6Zp/kIqJxEDWIZ67tAd7NLuk7zqN4yqe9nc0oNAOs1w==}
     peerDependencies:
       postcss: '>=5.0.0'
@@ -4735,12 +4739,8 @@ packages:
       postcss-scss:
         optional: true
     dependencies:
-      postcss: 7.0.39
-      postcss-html: 0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39)
-      postcss-jsx: 0.36.4(postcss-syntax@0.36.2)(postcss@7.0.39)
-      postcss-less: 3.1.4
-      postcss-markdown: 0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39)
-      postcss-scss: 2.1.1
+      postcss: 8.4.24
+      postcss-html: 1.5.0
     dev: false
 
   /postcss-value-parser@3.3.1:
@@ -5817,7 +5817,7 @@ packages:
       postcss-sass: 0.3.5
       postcss-scss: 2.1.1
       postcss-selector-parser: 3.1.2
-      postcss-syntax: 0.36.2(postcss-html@0.36.0)(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@1.5.0)(postcss@8.4.24)
       postcss-value-parser: 3.3.1
       resolve-from: 4.0.0
       signal-exit: 3.0.7
