@@ -12,6 +12,7 @@ const options = {
     Authorization: `Bearer ${proxyApiKey}`,
   },
 };
+
 const http = getAxiosInstance(options);
 
 export async function createDocCollectionAPI(name) {
