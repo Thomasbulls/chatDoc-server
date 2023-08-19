@@ -3,7 +3,8 @@ import FormData from 'form-data';
 import fetch from 'node-fetch';
 
 const proxyHost = process.env.PROXY_HOST || 'https://chatdoc.aitok.us';
-const proxyApiKey = process.env.PROXY_API_KEY;
+const proxyApiKey = 'ak-tqVV2zpX6s8CefIv0eqWcDOSHvuzFROQknIPS3X9zj8';
+//process.env.PROXY_API_KEY;
 const prefix = '/api/v1/';
 const baseURL = `${proxyHost}${prefix}`;
 const options = {
