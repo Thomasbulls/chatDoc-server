@@ -5,7 +5,6 @@ import appRouter from './app/app.router.js';
 import apiResponse from './middleware/apiResponse.js';
 import cors from '@koa/cors';
 import staticServer from 'koa-static';
-
 import https from 'https';
 import http from 'http';
 import { readFileSync } from 'fs';
@@ -35,7 +34,7 @@ app.use(
 app.use(apiResponse);
 app.use(appRouter.routes());
 
-app.listen(6030);
+// app.listen(6030);
 
 const options = {
   key: readFileSync('./server.key', 'utf8'),
