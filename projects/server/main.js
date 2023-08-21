@@ -9,6 +9,9 @@ import https from 'https';
 import http from 'http';
 import { readFileSync } from 'fs';
 import enforceHttps from 'koa-sslify';
+import dotenv from 'dotenv';
+dotenv.config();
+
 const app = new Koa();
 
 // 设置静态文件中间件
