@@ -40,8 +40,8 @@ app.use(appRouter.routes());
 // app.listen(6030);
 
 const options = {
-  key: readFileSync('./server.key', 'utf8'),
-  cert: readFileSync('./server.cert', 'utf8'),
+  key: readFileSync('./localhost-key.pem', 'utf8'),
+  cert: readFileSync('./localhost.pem', 'utf8'),
 };
 
 // start the server
